@@ -9,8 +9,10 @@ https://docs.djangoproject.com/en/1.9/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/1.9/ref/settings/
 """
-
+import warnings
 import os
+
+from django.core.exceptions import ImproperlyConfigured
 
 def get_env_variable(var_name):
     """Get the environment variable or return an exception"""
