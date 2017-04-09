@@ -1,8 +1,9 @@
 import dj_database_url
+
 from ..settings import *
 
 DEBUG = False
-TEMPLATE_DEBUG = False
+TEMPLATE_DEBUG = DEBUG
 
 ALLOWED_HOSTS = [
     'localhost',
