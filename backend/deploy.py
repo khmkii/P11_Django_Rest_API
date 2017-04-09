@@ -14,7 +14,7 @@ from whitenoise.django import DjangoWhiteNoise
 
 from django.core.wsgi import get_wsgi_application
 
-path = ""
+path = "/home/khmkii/P11_Django_Rest_API/"
 if path not in sys.path:
     sys.path.append(path)
 
