@@ -6,14 +6,11 @@ django.setup()
 from pugorugh.serializers import DogSerializer
 import json
 
+with open('pugorugh/static/dog_details.json', 'r') as file:
+    data = json.load(file)
 
-if __name__ == "__main__":
-
-    with open('pugorugh/static/dog_details.json', 'r') as file:
-        data = json.load(file)
-
-        serializer = DogSerializer(data=data, many=True)
-        if serializer.is_valid():
-            serializer.save()
-        else:
-            print(serializer.errors)
+    serializer = DogSerializer(data=data, many=True)
+    if serializer.is_valid():
+        serializer.save()
+    else:
+        print(serializer.errors)
